@@ -4,7 +4,7 @@ Railsアプリケーション組み込み型ドキュメント生成ツール
 
 ## Configure
 
-`MountDoc::Config`に書き込み
+config/initialzier/mount_doc.rb に書き込み
 
 - `auto_mount`: 自動でマウントするか否か(default: false)
 - `auto_mount_path`: 自動でマウントする先のパス(default: /doc)
@@ -27,6 +27,10 @@ And then execute:
 Or install it yourself as:
 
     $ gem install mount_doc
+
+And then generate initializer file
+
+    rails generator mount_doc:install
 
 And added config/routes.rb
 
