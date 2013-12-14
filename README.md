@@ -40,6 +40,27 @@ And added config/routes.rb
 
 access to http://localhost:3000/prefix !
 
+## Testing
+
+- RAILS_VERSION
+  - 3.2.3
+  - 4.0.2
+
+```
+gem install rails -v ${RAILS_VERSION}
+```
+
+```
+cd spec/mock/rails_${RALS_VERSION}
+rake db:migrate
+rake db:test:prepare
+cd -
+```
+
+```
+RAILS_VERSION=${RAILS_VERSION} bundle exec rake spec
+```
+
 
 ## Usage
 
