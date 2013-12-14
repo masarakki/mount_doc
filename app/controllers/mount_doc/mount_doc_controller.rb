@@ -7,12 +7,10 @@ module MountDoc
     include MountDocHelper
 
     layout 'mount_doc'
-    
+
     def index
       @page_title = 'Index'
-
       readme_file = Dir[File.join(::Rails.root, '/README.*')].first
-
       render text: GitHub::Markup.render(readme_file), layout: true
     end
 
